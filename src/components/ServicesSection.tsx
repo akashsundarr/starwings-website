@@ -66,9 +66,9 @@ const ServicesSection = () => {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group bg-card rounded-2xl p-8 shadow-sm border border-border hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="group bg-card rounded-2xl p-8 shadow-sm border border-border hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-sky-light flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
+              <div className="w-14 h-14 rounded-xl bg-green-light flex items-center justify-center mb-5 group-hover:bg-accent group-hover:text-accent-foreground transition-colors">
                 <service.icon className="w-7 h-7 text-accent group-hover:text-accent-foreground transition-colors" />
               </div>
               <h3 className="font-heading text-xl font-semibold text-foreground mb-3">

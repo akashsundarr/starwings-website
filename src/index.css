@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 220 30% 15%;
+    --background: 220 20% 97%;
+    --foreground: 233 51% 23%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 30% 15%;
+    --card-foreground: 233 51% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 15%;
+    --popover-foreground: 233 51% 23%;
 
-    --primary: 217 71% 25%;
+    --primary: 233 51% 36%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 217 71% 25%;
+    --secondary: 220 20% 96%;
+    --secondary-foreground: 233 51% 36%;
 
-    --muted: 210 25% 95%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 220 18% 94%;
+    --muted-foreground: 220 10% 46%;
 
-    --accent: 199 89% 48%;
+    --accent: 96 53% 51%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
-    --ring: 217 71% 25%;
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 233 51% 36%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --navy: 217 71% 25%;
-    --navy-deep: 220 60% 12%;
-    --sky: 199 89% 48%;
-    --sky-light: 199 89% 95%;
-    --steel: 215 16% 47%;
-    --ice: 210 40% 98%;
+    --navy: 233 51% 36%;
+    --navy-deep: 233 50% 14%;
+    --green: 96 53% 51%;
+    --green-light: 96 53% 94%;
+    --steel: 220 10% 46%;
+    --ice: 220 20% 97%;
 
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'DM Sans', sans-serif;
@@ -54,7 +54,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 233 51% 36%;
   }
 }
 
@@ -75,7 +75,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--sky)) 100%);
+    background-image: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--green)) 100%);
   }
 
   .bg-navy {
@@ -86,12 +86,12 @@
     background-color: hsl(var(--navy-deep));
   }
 
-  .bg-sky-custom {
-    background-color: hsl(var(--sky));
+  .bg-green-brand {
+    background-color: hsl(var(--green));
   }
 
-  .bg-sky-light {
-    background-color: hsl(var(--sky-light));
+  .bg-green-light {
+    background-color: hsl(var(--green-light));
   }
 
   .bg-ice {
@@ -106,8 +106,8 @@
     color: hsl(var(--navy-deep));
   }
 
-  .text-sky-custom {
-    color: hsl(var(--sky));
+  .text-green-brand {
+    color: hsl(var(--green));
   }
 
   .text-steel {
@@ -127,7 +127,7 @@
   }
 
   .hero-overlay {
-    background: linear-gradient(135deg, hsl(var(--navy-deep) / 0.92) 0%, hsl(var(--navy) / 0.75) 100%);
+    background: linear-gradient(135deg, hsl(var(--navy-deep) / 0.85) 0%, hsl(var(--navy) / 0.6) 50%, hsl(var(--navy-deep) / 0.75) 100%);
   }
 }
 

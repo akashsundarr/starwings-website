@@ -36,13 +36,13 @@ const ProjectsSection = () => {
     <section id="projects" className="section-padding bg-navy-deep">
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-sky-custom font-heading font-semibold text-sm uppercase tracking-widest mb-3">
+          <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-3">
             Our Portfolio
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-ice mb-4">
             Completed Projects
           </h2>
-          <p className="text-ice/60 leading-relaxed">
+          <p className="text-ice/65 leading-relaxed">
             We have successfully delivered HVAC solutions for major commercial, hospitality, and entertainment projects across South India.
           </p>
         </div>
@@ -59,15 +59,15 @@ const ProjectsSection = () => {
                 className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block bg-accent/90 text-accent-foreground text-xs font-heading font-semibold px-3 py-1 rounded-full mb-3">
+                <span className="inline-block bg-accent text-accent-foreground text-xs font-heading font-semibold px-3 py-1 rounded-full mb-3 shadow-md">
                   {project.type}
                 </span>
                 <h3 className="font-heading text-xl font-bold text-ice mb-1">
                   {project.title}
                 </h3>
-                <div className="flex items-center gap-1 text-ice/70 text-sm">
+                <div className="flex items-center gap-1 text-ice/75 text-sm">
                   <MapPin className="w-4 h-4" />
                   {project.location}
                 </div>
