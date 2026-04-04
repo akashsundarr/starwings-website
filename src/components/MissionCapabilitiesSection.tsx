@@ -30,27 +30,27 @@ const MissionCapabilitiesSection = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column */}
-          <div className="space-y-10">
+          <div className="space-y-8">
             {/* Our Mission */}
-            <div>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-ice mb-4 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-accent-foreground text-lg">⚖</span>
                 Our Mission
               </h2>
-              <p className="text-ice/80 leading-relaxed mb-4">
+              <p className="text-ice/85 leading-relaxed mb-4">
                 You can rely on STARWINGS for High Quality, Efficiency, Integrity, Knowledge, and Dedication to Excellence. The STARWINGS crew is happy to support these attributes.
               </p>
-              <p className="text-ice/80 leading-relaxed mb-4">
+              <p className="text-ice/85 leading-relaxed mb-4">
                 We are a group of exceptionally skilled people who are dedicated to becoming a profitable industry leader.
               </p>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {[
                   "Recognizing that our purpose is to serve our customers as an extension of their organization, delivering exceptional value.",
                   "Creating for the STARWINGS Team an environment of trust, respect and common values, encouraging teamwork and the achievement of individual growth.",
                   "Contributing to our communities and understanding our responsibility in helping those less privileged.",
                   "Supporting our industry in every way possible for continued growth and improvement.",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-ice/70 text-sm leading-relaxed">
+                  <li key={item} className="flex items-start gap-2 text-ice/75 text-sm leading-relaxed">
                     <span className="w-2 h-2 rounded-sm bg-accent flex-shrink-0 mt-1.5" />
                     {item}
                   </li>
@@ -59,28 +59,28 @@ const MissionCapabilitiesSection = () => {
             </div>
 
             {/* Our Commitment */}
-            <div>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-ice mb-4 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-accent-foreground text-lg">🤝</span>
                 Our Commitment
               </h2>
-              <p className="text-ice/80 leading-relaxed">
+              <p className="text-ice/85 leading-relaxed">
                 Our top goal is to gain your trust and deliver outstanding service since we think that a company's value is established by honesty and hard effort and that we cannot set a price on our values. We recognize that exceeding your expectations will gain your confidence and keep your business.
               </p>
             </div>
 
             {/* Our Constructions Capabilities */}
-            <div>
+            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
               <h2 className="font-heading text-2xl md:text-3xl font-bold text-ice mb-4 flex items-center gap-3">
                 <span className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center text-accent-foreground text-lg">⚙</span>
                 Our Constructions Capabilities
               </h2>
-              <p className="text-ice/80 leading-relaxed mb-4">
+              <p className="text-ice/85 leading-relaxed mb-4">
                 STARWINGS offers a broad range of services and features that enable our clients to get the best possible performance out of their air conditioning systems. STARWINGS will offer the skill, experience, and understanding you need, whether you're wanting to reduce energy expenses, install new equipment, maintain an existing system, or totally upgrade your infrastructure.
               </p>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {capabilities.map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-ice/70 text-sm leading-relaxed">
+                  <li key={item} className="flex items-start gap-2 text-ice/75 text-sm leading-relaxed">
                     <span className="w-2 h-2 rounded-sm bg-accent flex-shrink-0 mt-1.5" />
                     {item}
                   </li>
@@ -115,7 +115,7 @@ const MissionCapabilitiesSection = () => {
               ))}
             </div>
 
-            <div className="space-y-4 text-ice/80 leading-relaxed text-sm">
+            <div className="space-y-4 text-ice/85 leading-relaxed text-sm bg-white/5 rounded-2xl p-6 border border-white/10">
               <p>
                 We have a design team of our own with qualified and experienced personnels for design of major projects & residences without disturbing the aesthetics and without compromising professionalism.
               </p>

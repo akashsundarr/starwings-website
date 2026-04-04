@@ -6,7 +6,7 @@ const ClientsSection = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-3">
-            Our Portfolio
+            Trusted By Industry Leaders
           </p>
           <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-2">
             Completed Projects and Trusted By

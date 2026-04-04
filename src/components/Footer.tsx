@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <img src={logo} alt="StarWings" className="h-12 mb-4 brightness-200" />
-            <p className="text-ice/60 text-sm leading-relaxed mb-4">
+            <img src={logo} alt="StarWings" className="h-14 mb-5 brightness-200" />
+            <p className="text-ice/65 text-sm leading-relaxed mb-4">
               Generating Superior Comfort since 2006. Your trusted HVAC partner across South India.
             </p>
           </div>
@@ -23,7 +23,7 @@ const Footer = () => {
                 <Link
                   key={link}
                   to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
-                  className="text-ice/60 hover:text-sky-custom transition-colors text-sm"
+                  className="text-ice/60 hover:text-accent transition-colors text-sm"
                 >
                   {link}
                 </Link>
@@ -48,15 +48,15 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-base mb-4">Contact</h4>
             <div className="flex flex-col gap-3 text-sm text-ice/60">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-sky-custom" />
+                <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent" />
                 Kaloor, Kochi - 681763
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 flex-shrink-0 text-sky-custom" />
+                <Phone className="w-4 h-4 flex-shrink-0 text-accent" />
                 +91 9846 001 702
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 flex-shrink-0 text-sky-custom" />
+                <Mail className="w-4 h-4 flex-shrink-0 text-accent" />
                 starwings@gmail.com
               </div>
             </div>

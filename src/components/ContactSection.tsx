@@ -25,7 +25,7 @@ const offices = [
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="section-padding bg-background">
+    <section id="contact" className="section-padding bg-muted">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Form */}
@@ -65,7 +65,7 @@ const ContactSection = () => {
               />
               <button
                 type="submit"
-                className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-heading font-semibold hover:bg-accent transition-colors"
+                className="bg-accent text-accent-foreground px-8 py-3.5 rounded-lg font-heading font-semibold text-base hover:brightness-110 transition-all shadow-md"
               >
                 Send Message
               </button>
@@ -81,17 +81,17 @@ const ContactSection = () => {
               {offices.map((office) => (
                 <div
                   key={office.city}
-                  className="bg-card rounded-xl p-5 border border-border"
+                  className="bg-card rounded-xl p-5 border border-border hover:shadow-md transition-shadow"
                 >
                   <h4 className="font-heading font-semibold text-foreground mb-2">
                     {office.city}
                   </h4>
                   <div className="flex items-start gap-2 text-muted-foreground text-sm mb-1">
-                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                    <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-accent" />
                     {office.address}
                   </div>
                   <div className="flex items-center gap-2 text-muted-foreground text-sm">
-                    <Phone className="w-4 h-4 flex-shrink-0" />
+                    <Phone className="w-4 h-4 flex-shrink-0 text-accent" />
                     {office.phone}
                   </div>
                 </div>
@@ -100,20 +100,20 @@ const ContactSection = () => {
 
             <div className="mt-6 bg-navy rounded-xl p-6">
               <div className="flex items-center gap-3 mb-3">
-                <Clock className="w-5 h-5 text-sky-custom" />
+                <Clock className="w-5 h-5 text-accent" />
                 <h4 className="font-heading font-semibold text-ice">
                   Working Hours
                 </h4>
               </div>
-              <p className="text-ice/70 text-sm">
+              <p className="text-ice/75 text-sm">
                 Monday – Saturday: 9:00 AM – 6:00 PM
               </p>
-              <p className="text-ice/70 text-sm">
+              <p className="text-ice/75 text-sm">
                 Emergency Services: 24/7 Available
               </p>
               <div className="flex items-center gap-2 mt-3">
-                <Mail className="w-4 h-4 text-sky-custom" />
-                <span className="text-ice/70 text-sm">starwings@gmail.com</span>
+                <Mail className="w-4 h-4 text-accent" />
+                <span className="text-ice/75 text-sm">starwings@gmail.com</span>
               </div>
             </div>
           </div>

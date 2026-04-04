@@ -45,9 +45,9 @@ const MaintenanceSection = () => {
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex gap-4 p-4 rounded-xl bg-ice border border-border"
+                  className="flex gap-4 p-4 rounded-xl bg-ice border border-border hover:shadow-md transition-shadow"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-sky-light flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-green-light flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-5 h-5 text-accent" />
                   </div>
                   <div>

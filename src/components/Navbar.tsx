@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-sm">
       <div className="container mx-auto flex items-center justify-between h-20 px-4">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="StarWings" className="h-12 w-auto" />
+          <img src={logo} alt="StarWings" className="h-14 w-auto" />
         </Link>
 
         {/* Desktop */}
