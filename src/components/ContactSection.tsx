@@ -36,7 +36,7 @@ const ContactSection = () => {
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-6">
               Contact Us
             </h2>
-            <p className="text-muted-foreground mb-8">
+            <p className="text-muted-foreground leading-[1.7] max-w-[700px] mb-8">
               Ready to discuss your HVAC needs? Reach out to us and our team will get back to you promptly.
             </p>
 
@@ -105,15 +105,15 @@ const ContactSection = () => {
                   Working Hours
                 </h4>
               </div>
-              <p className="text-ice/75 text-sm">
+              <p className="text-white text-sm">
                 Monday – Saturday: 9:00 AM – 6:00 PM
               </p>
-              <p className="text-ice/75 text-sm">
+              <p className="text-white text-sm">
                 Emergency Services: 24/7 Available
               </p>
               <div className="flex items-center gap-2 mt-3">
                 <Mail className="w-4 h-4 text-accent" />
-                <span className="text-ice/75 text-sm">starwings@gmail.com</span>
+                <span className="text-white text-sm">starwings@gmail.com</span>
               </div>
             </div>
           </div>

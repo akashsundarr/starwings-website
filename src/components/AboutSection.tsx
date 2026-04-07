@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
-import about1 from "@/assets/about-1.jpg";
-import about2 from "@/assets/about-2.jpg";
+import about1 from "@/assets/about-1.webp";
+import about2 from "@/assets/about-2.webp";
 
 const capabilities = [
   "HVAC systems design & installation",
@@ -22,13 +22,13 @@ const AboutSection = () => {
               <img
                 src={about1}
                 alt="StarWings HVAC Equipment"
-                className="rounded-2xl object-cover w-full h-64 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="rounded-2xl w-full aspect-[4/3] object-cover"
                 loading="lazy"
               />
               <img
                 src={about2}
                 alt="StarWings Installation"
-                className="rounded-2xl object-cover w-full h-64 mt-8 shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                className="rounded-2xl w-full aspect-[4/3] object-cover"
                 loading="lazy"
               />
             </div>
@@ -45,10 +45,10 @@ const AboutSection = () => {
               Your Trusted Partner in{" "}
               <span className="text-gradient">Climate Solutions</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4 max-w-lg">
+            <p className="text-muted-foreground leading-[1.7] max-w-[700px] mb-6">
               Star Wings was founded in 2006 and has successfully completed over 18 years serving clients across South India. Headquartered in Kochi with offices in Calicut, Palakkad, and Coimbatore, we specialize in the design, supply, installation, and maintenance of HVAC systems.
             </p>
-            <p className="text-muted-foreground leading-relaxed mb-8 max-w-lg">
+            <p className="text-muted-foreground leading-[1.7] max-w-[700px] mb-8">
               Our team of experienced engineers ensures every project meets the highest standards of quality, efficiency, and comfort. We serve commercial establishments, hotels, hospitals, shopping malls, theaters, and residential properties.
             </p>
 

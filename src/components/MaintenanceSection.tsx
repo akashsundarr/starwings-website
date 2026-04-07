@@ -1,5 +1,5 @@
 import { Shield, Clock, Zap, HeadphonesIcon } from "lucide-react";
-import maintenance1 from "@/assets/maintenance-1.jpg";
+import maintenance1 from "@/assets/maintenance-1.webp";
 
 const features = [
   {
@@ -37,7 +37,7 @@ const MaintenanceSection = () => {
               Reliable Support,{" "}
               <span className="text-gradient">Always Available</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-10">
+            <p className="text-muted-foreground leading-[1.7] max-w-[700px] mb-10">
               StarWings provides comprehensive maintenance and 24/7 after-sales service for all air conditioning systems. Our strategically positioned service teams are fully prepared to handle every service need in any environment.
             </p>
 

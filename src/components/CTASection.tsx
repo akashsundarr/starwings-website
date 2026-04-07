@@ -15,10 +15,10 @@ const CTASection = () => {
       />
       <div className="absolute inset-0 hero-overlay" />
       <div className="relative container mx-auto px-4 text-center">
-        <h2 className="font-heading text-3xl md:text-5xl font-bold text-ice mb-6">
+        <h2 className="font-heading text-3xl md:text-5xl font-bold text-white mb-6">
           Ready to Experience Superior Comfort?
         </h2>
-        <p className="text-ice/75 text-lg max-w-xl mx-auto mb-10">
+        <p className="text-slate-200 text-lg max-w-xl mx-auto mb-10">
           Let our experts design the perfect climate solution for your space. Get a free consultation today.
         </p>
         <Link

@@ -1,79 +1,142 @@
 import { MapPin } from "lucide-react";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import { Link } from "react-router-dom";
 
-const projects = [
+// IMPORT IMAGES
+import lulu from "@/assets/projects/lulu-shopping-mall-tirur.webp";
+import maratt from "@/assets/projects/maratt-it-park-kakkanad.webp";
+import joyalukkas from "@/assets/projects/joyalukkas-gold-tower-kochi.webp";
+import hyatt from "@/assets/projects/lulu-hyatt-trivandrum.webp";
+import aster from "@/assets/projects/aster-mims-hospital-kottakkal.webp";
+import ems from "@/assets/projects/ems-hospital-perinthalmanna.webp";
+
+const featuredProjects = [
   {
-    image: project1,
-    title: "Lulu International Shopping Mall",
+    title: "LULU SHOPPING MALL",
+    location: "Tirur, Kerala",
+    category: "Commercial",
+    capacity: "1260 TR",
+    system: "Chiller",
+    image: lulu,
+  },
+  {
+    title: "MARATT IT PARK",
+    location: "Kakkanad, Kerala",
+    category: "IT Park",
+    image: maratt,
+  },
+  {
+    title: "JOYALUKKAS GOLD TOWER",
     location: "Kochi, Kerala",
-    type: "Commercial",
+    category: "Commercial",
+    image: joyalukkas,
   },
   {
-    image: project2,
-    title: "Grand Hyatt Hotel",
-    location: "Kochi, Kerala",
-    type: "Hospitality",
+    title: "LULU HYATT",
+    location: "Trivandrum, Kerala",
+    category: "Hospitality",
+    image: hyatt,
   },
   {
-    image: project3,
-    title: "Hilite Business Park",
-    location: "Calicut, Kerala",
-    type: "Commercial",
+    title: "ASTER MIMS HOSPITAL",
+    location: "Kottakkal, Kerala",
+    category: "Healthcare",
+    image: aster,
   },
   {
-    image: project4,
-    title: "PVR Cinemas",
-    location: "Multiple Locations",
-    type: "Entertainment",
+    title: "EMS HOSPITAL",
+    location: "Perinthalmanna, Kerala",
+    category: "Healthcare",
+    image: ems,
   },
 ];
 
 const ProjectsSection = () => {
+  const [main, ...others] = featuredProjects;
+
   return (
-    <section id="projects" className="section-padding bg-navy-deep">
-      <div className="container mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-accent font-heading font-semibold text-sm uppercase tracking-widest mb-3">
+    <section className="section-padding bg-navy-deep">
+      <div className="container mx-auto max-w-6xl">
+        {/* HEADER */}
+        <div className="text-center mb-16">
+          <p className="text-accent text-sm uppercase tracking-widest">
             Our Portfolio
           </p>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold text-ice mb-4">
+
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
             Completed Projects
           </h2>
-          <p className="text-ice/65 leading-relaxed">
-            We have successfully delivered HVAC solutions for major commercial, hospitality, and entertainment projects across South India.
+
+          <p className="text-slate-300 mt-3">
+            25+ Projects Delivered Across South India
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {projects.map((project) => (
+        {/* GRID */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* BIG CARD */}
+          <div className="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-accent/20 transition duration-500">
+            <img
+              src={main.image}
+              alt={main.title}
+              loading="lazy"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+
+            {/* Overlay */}
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300" />
+
+            {/* Content */}
+            <div className="absolute bottom-0 p-6 transform transition-all duration-500 group-hover:-translate-y-2">
+              <h3 className="text-white text-2xl font-bold">{main.title}</h3>
+
+              <div className="flex items-center text-sm text-slate-200 mt-1">
+                <MapPin className="w-4 h-4 mr-1" />
+                {main.location}
+              </div>
+
+              <p className="text-sm text-slate-300 mt-1">
+                {main.capacity} • {main.system}
+              </p>
+            </div>
+          </div>
+
+          {/* SMALL CARDS */}
+          {others.map((p) => (
             <div
-              key={project.title}
-              className="group relative overflow-hidden rounded-2xl"
+              key={p.title}
+              className="relative rounded-2xl overflow-hidden group cursor-pointer hover:shadow-xl hover:shadow-accent/10 transition duration-500"
             >
               <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                src={p.image}
+                alt={p.title}
                 loading="lazy"
+                className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block bg-accent text-accent-foreground text-xs font-heading font-semibold px-3 py-1 rounded-full mb-3 shadow-md">
-                  {project.type}
-                </span>
-                <h3 className="font-heading text-xl font-bold text-ice mb-1">
-                  {project.title}
-                </h3>
-                <div className="flex items-center gap-1 text-ice/75 text-sm">
-                  <MapPin className="w-4 h-4" />
-                  {project.location}
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition duration-300" />
+
+              {/* Content */}
+              <div className="absolute bottom-0 p-4 transform transition-all duration-500 group-hover:-translate-y-1">
+                <h3 className="text-white text-sm font-semibold">{p.title}</h3>
+
+                <div className="flex items-center text-xs text-slate-200 mt-1">
+                  <MapPin className="w-3 h-3 mr-1" />
+                  {p.location}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* BUTTON */}
+        <div className="text-center mt-12">
+          <Link
+            to="/projects"
+            className="bg-accent px-6 py-3 rounded-full font-semibold hover:bg-accent/90 transition"
+          >
+            View All Projects →
+          </Link>
         </div>
       </div>
     </section>

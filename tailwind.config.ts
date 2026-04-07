@@ -2,7 +2,12 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -14,9 +19,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Outfit', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        heading: ["Outfit", "sans-serif"],
+        body: ["DM Sans", "sans-serif"],
       },
+
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -62,12 +68,15 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+
       keyframes: {
+        // existing
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -88,18 +97,34 @@ export default {
           from: { opacity: "0", transform: "translateX(-30px)" },
           to: { opacity: "1", transform: "translateX(0)" },
         },
-        "counter": {
+        counter: {
           from: { opacity: "0", transform: "scale(0.5)" },
           to: { opacity: "1", transform: "scale(1)" },
         },
+
+        // ✅ ADD THIS
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "marquee-reverse": {
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
+        },
       },
+
       animation: {
+        // existing
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.7s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
         "slide-right": "slide-right 0.7s ease-out forwards",
-        "counter": "counter 0.5s ease-out forwards",
+        counter: "counter 0.5s ease-out forwards",
+
+        // ✅ ADD THIS
+        marquee: "marquee 28s linear infinite",
+        "marquee-reverse": "marquee-reverse 32s linear infinite",
       },
     },
   },
