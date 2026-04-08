@@ -93,20 +93,20 @@ const MarqueeRow = ({
   return (
     <div className="overflow-hidden">
       <div
-        className={`flex gap-6 sm:gap-12 w-max ${
+        className={`flex gap-8 sm:gap-14 w-max ${
           reverse ? "animate-marquee-reverse" : "animate-marquee"
         }`}
       >
         {[...logos, ...logos].map((logo, i) => (
           <div
             key={i}
-            className="h-12 sm:h-16 w-[100px] sm:w-[140px] flex items-center justify-center shrink-0"
+            className="h-16 sm:h-20 w-[140px] sm:w-[180px] flex items-center justify-center shrink-0"
           >
             <img
               src={logo.image}
               alt={logo.name}
               loading="lazy"
-              className="max-h-8 sm:max-h-12 w-auto object-contain 
+              className="max-h-12 sm:max-h-14 w-auto object-contain 
                          transition-transform duration-300 
                          hover:scale-110"
             />
@@ -118,7 +118,7 @@ const MarqueeRow = ({
 };
 
 const ClientsSection = () => {
-  const midpoint = Math.ceil(clients.length / 2);
+  const midpoint = Math.ceil(clients.length / 3);
   const firstRow = clients.slice(0, midpoint);
   const secondRow = clients.slice(midpoint);
 
