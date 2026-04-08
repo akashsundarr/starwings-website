@@ -1,10 +1,15 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
-const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
 import logoSvg from "@/assets/logo.svg";
 import logoPng from "@/assets/logo.png";
+
+const isIOS =
+  (typeof navigator !== "undefined" &&
+    /iPad|iPhone|iPod/.test(navigator.userAgent)) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
@@ -19,16 +24,14 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-      
       {/* Container */}
       <div className="container mx-auto flex items-center justify-between px-4 h-16 lg:h-20">
-        
         {/* Logo (NO effects at all) */}
         <Link to="/" className="flex items-center">
           <img
             src={isIOS ? logoPng : logoSvg}
             alt="StarWings"
-            className="h-12 lg:h-16 object-contain [image-rendering:crisp-edges]"
+            className="h-12 lg:h-16 object-contain"
           />
         </Link>
 
@@ -86,7 +89,6 @@ const Navbar = () => {
       {open && (
         <div className="lg:hidden bg-white border-t border-gray-200">
           <div className="px-6 py-6 flex flex-col gap-4">
-            
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
 
@@ -117,7 +119,6 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               Call Now
             </a>
-
           </div>
         </div>
       )}
