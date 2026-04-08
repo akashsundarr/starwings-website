@@ -190,9 +190,9 @@ const Services = () => {
 
 
       {/* PRODUCTS SECTION */}
-      <div className="pt-24">
+      
         <ProductsHexSection categories={productCategories} />
-      </div>
+      
 
       <CTASection />
       <Footer />
