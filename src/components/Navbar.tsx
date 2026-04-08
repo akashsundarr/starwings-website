@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
 
-import logoDark from "@/assets/logo.svg";
-
+import logoSvg from "@/assets/logo.svg";
+import logoPng from "@/assets/logo.png";
 const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
@@ -25,9 +26,9 @@ const Navbar = () => {
         {/* Logo (NO effects at all) */}
         <Link to="/" className="flex items-center">
           <img
-            src={logoDark}
+            src={isIOS ? logoPng : logoSvg}
             alt="StarWings"
-            className="h-12 sm:h-14 lg:h-12 w-auto object-contain"
+            className="h-12 lg:h-16 object-contain [image-rendering:crisp-edges]"
           />
         </Link>
 
