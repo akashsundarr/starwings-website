@@ -1,7 +1,88 @@
 import React from "react";
 
-// imports same...
+// CLIENT LOGOS
+import marriott from "@/assets/clients/marriott-logo.webp";
+import tamara from "@/assets/clients/tamara-logo.webp";
+import radisson from "@/assets/clients/radisson-hotels-logo.webp";
+import taj from "@/assets/clients/taj-hotels-logo.webp";
+import pearlView from "@/assets/clients/pearl-view-logo.webp";
+import hyatt from "@/assets/clients/hyatt-regency-logo.webp";
+import clubMahindra from "@/assets/clients/club-mahindra-logo.webp";
+import indriya from "@/assets/clients/indriya-resorts-logo.webp";
+import coralReef from "@/assets/clients/coral-reef-logo.webp";
 
+import tataElxsi from "@/assets/clients/tata-elxsi-logo.webp";
+import ramco from "@/assets/clients/ramco-logo.webp";
+import amrita from "@/assets/clients/amrita-hospital-logo.webp";
+
+import max from "@/assets/clients/max-fashion-logo.webp";
+import luluHyper from "@/assets/clients/lulu-hypermarket-logo.webp";
+import luluRetail from "@/assets/clients/lulu-retail-logo.webp";
+import tanishq from "@/assets/clients/tanishq-logo.webp";
+import bhima from "@/assets/clients/bhima-jewellers-logo.webp";
+import malabar from "@/assets/clients/malabar-gold-logo.webp";
+import joyalukkas from "@/assets/clients/joyalukkas-logo.webp";
+import allenSolly from "@/assets/clients/allen-solly-logo.webp";
+import louisPhilippe from "@/assets/clients/louis-philippe-logo.webp";
+import vguard from "@/assets/clients/v-guard-logo.webp";
+
+import amanaToyota from "@/assets/clients/amana-toyota-logo.webp";
+
+import lisie from "@/assets/clients/lisie-hospital-logo.webp";
+import ems from "@/assets/clients/ems-hospital-logo.webp";
+import ascent from "@/assets/clients/ascent-hospital-logo.webp";
+import medicalTrust from "@/assets/clients/medical-trust-hospital-logo.webp";
+import amara from "@/assets/clients/amara-hospital-logo.webp";
+import meditrina from "@/assets/clients/meditrina-hospital-logo.webp";
+
+import skyline from "@/assets/clients/skyline-builders-logo.webp";
+import veegaland from "@/assets/clients/veegaland-homes-logo.webp";
+
+// =====================
+// DATA
+// =====================
+const clients = [
+  { name: "Marriott", image: marriott },
+  { name: "Tamara", image: tamara },
+  { name: "Radisson Hotels", image: radisson },
+  { name: "Taj Hotels", image: taj },
+  { name: "Pearl View", image: pearlView },
+  { name: "Hyatt Regency", image: hyatt },
+  { name: "Club Mahindra", image: clubMahindra },
+  { name: "Indriya Resorts", image: indriya },
+  { name: "Coral Reef", image: coralReef },
+
+  { name: "Tata Elxsi", image: tataElxsi },
+  { name: "Ramco", image: ramco },
+  { name: "Amrita Hospital", image: amrita },
+
+  { name: "Max Fashion", image: max },
+  { name: "LuLu Hypermarket", image: luluHyper },
+  { name: "LuLu Retail", image: luluRetail },
+  { name: "Tanishq", image: tanishq },
+  { name: "Bhima Jewellers", image: bhima },
+  { name: "Malabar Gold", image: malabar },
+  { name: "Joyalukkas", image: joyalukkas },
+  { name: "Allen Solly", image: allenSolly },
+  { name: "Louis Philippe", image: louisPhilippe },
+  { name: "V-Guard", image: vguard },
+
+  { name: "Amana Toyota", image: amanaToyota },
+
+  { name: "Lisie Hospital", image: lisie },
+  { name: "EMS Hospital", image: ems },
+  { name: "Ascent Hospital", image: ascent },
+  { name: "Medical Trust Hospital", image: medicalTrust },
+  { name: "Amara Hospital", image: amara },
+  { name: "Meditrina Hospital", image: meditrina },
+
+  { name: "Skyline Builders", image: skyline },
+  { name: "Veegaland Homes", image: veegaland },
+];
+
+// =====================
+// MARQUEE ROW COMPONENT
+// =====================
 const MarqueeRow = ({
   logos,
   reverse = false,
