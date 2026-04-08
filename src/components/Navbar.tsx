@@ -27,7 +27,7 @@ const Navbar = () => {
           <img
             src={logoDark}
             alt="StarWings"
-            className="h-12 lg:h-16 object-contain"
+            className="h-12 sm:h-14 lg:h-12 w-auto object-contain"
           />
         </Link>
 
