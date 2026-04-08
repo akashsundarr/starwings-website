@@ -28,85 +28,80 @@ const capabilities = [
 const MissionCapabilitiesSection = () => {
   return (
     <section id="mission" className="section-padding bg-navy-deep">
-      <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left Column */}
-          <div className="space-y-8">
-            {/* Our Mission */}
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="w-10 h-10 rounded-lg bg-green-500/20 border border-green-400/30 flex items-center justify-center">
-                  <Target className="w-5 h-5 text-white" />
+      <div className="container mx-auto px-4">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-start">
+          
+          {/* LEFT */}
+          <div className="space-y-6 md:space-y-8">
+            
+            {/* Mission */}
+            <div className="bg-white/5 rounded-2xl p-4 sm:p-6 border border-white/10">
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 flex items-center gap-3">
+                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-green-500/20 border border-green-400/30 flex items-center justify-center">
+                  <Target className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
                 Our Mission
               </h2>
-              <p className="text-slate-200 leading-[1.7] max-w-[700px] mb-4">
+
+              <p className="text-slate-200 text-sm sm:text-base leading-[1.6] mb-3 max-w-none">
                 You can rely on STARWINGS for High Quality, Efficiency,
-                Integrity, Knowledge, and Dedication to Excellence. The
-                STARWINGS crew is happy to support these attributes.
+                Integrity, Knowledge, and Dedication to Excellence.
               </p>
-              <p className="text-slate-200 leading-[1.7] max-w-[700px] mb-4">
-                We are a group of exceptionally skilled people who are dedicated
-                to becoming a profitable industry leader.
+
+              <p className="text-slate-200 text-sm sm:text-base leading-[1.6] mb-3 max-w-none">
+                We are a group of exceptionally skilled people dedicated to
+                becoming a profitable industry leader.
               </p>
-              <ul className="space-y-2.5">
+
+              <ul className="space-y-2">
                 {[
-                  "Recognizing that our purpose is to serve our customers as an extension of their organization, delivering exceptional value.",
-                  "Creating for the STARWINGS Team an environment of trust, respect and common values, encouraging teamwork and the achievement of individual growth.",
-                  "Contributing to our communities and understanding our responsibility in helping those less privileged.",
-                  "Supporting our industry in every way possible for continued growth and improvement.",
+                  "Delivering exceptional value as an extension of our customers.",
+                  "Building a culture of trust, respect, and teamwork.",
+                  "Supporting communities and social responsibility.",
+                  "Contributing to industry growth and improvement.",
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-slate-200 text-sm leading-[1.6]"
+                    className="flex items-start gap-2 text-slate-200 text-xs sm:text-sm leading-[1.5]"
                   >
-                    <span className="w-2 h-2 rounded-sm bg-accent flex-shrink-0 mt-1.5" />
+                    <span className="w-2 h-2 rounded-sm bg-accent mt-1.5" />
                     {item}
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Our Commitment */}
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="w-10 h-10 rounded-lg bg-green-500/20 border border-green-400/30 flex items-center justify-center">
-                  <Handshake className="w-5 h-5 text-white" />
+            {/* Commitment */}
+            <div className="bg-white/5 rounded-2xl p-4 sm:p-6 border border-white/10">
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 flex items-center gap-3">
+                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-green-500/20 border border-green-400/30 flex items-center justify-center">
+                  <Handshake className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
                 Our Commitment
               </h2>
-              <p className="text-slate-200 leading-[1.7] max-w-[700px]">
-                Our top goal is to gain your trust and deliver outstanding
-                service since we think that a company's value is established by
-                honesty and hard effort and that we cannot set a price on our
-                values. We recognize that exceeding your expectations will gain
-                your confidence and keep your business.
+
+              <p className="text-slate-200 text-sm sm:text-base leading-[1.6] max-w-none">
+                Our goal is to gain your trust through honest work and
+                consistent quality, ensuring long-term relationships.
               </p>
             </div>
 
-            {/* Our Constructions Capabilities */}
-            <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3">
-                <span className="w-10 h-10 rounded-lg bg-green-500/20 border border-green-400/30 flex items-center justify-center">
-                  <Settings className="w-5 h-5 text-white" />
+            {/* Capabilities */}
+            <div className="bg-white/5 rounded-2xl p-4 sm:p-6 border border-white/10">
+              <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3 sm:mb-4 flex items-center gap-3">
+                <span className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-green-500/20 border border-green-400/30 flex items-center justify-center">
+                  <Settings className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                 </span>
-                Our Constructions Capabilities
+                Capabilities
               </h2>
-              <p className="text-slate-200 leading-[1.7] max-w-[700px] mb-4">
-                STARWINGS offers a broad range of services and features that
-                enable our clients to get the best possible performance out of
-                their air conditioning systems. STARWINGS will offer the skill,
-                experience, and understanding you need, whether you're wanting
-                to reduce energy expenses, install new equipment, maintain an
-                existing system, or totally upgrade your infrastructure.
-              </p>
-              <ul className="space-y-2.5">
+
+              <ul className="space-y-2">
                 {capabilities.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-2 text-slate-200 text-sm leading-[1.6]"
+                    className="flex items-start gap-2 text-slate-200 text-xs sm:text-sm leading-[1.5]"
                   >
-                    <span className="w-2 h-2 rounded-sm bg-accent flex-shrink-0 mt-1.5" />
+                    <span className="w-2 h-2 rounded-sm bg-accent mt-1.5" />
                     {item}
                   </li>
                 ))}
@@ -114,18 +109,18 @@ const MissionCapabilitiesSection = () => {
             </div>
           </div>
 
-          {/* Right Column */}
+          {/* RIGHT */}
           <div>
-            <h2 className="font-heading text-2xl md:text-3xl font-bold text-white mb-6">
-              Design & Planning of Projects
+            <h2 className="font-heading text-xl sm:text-2xl md:text-3xl font-bold text-white mb-5 sm:mb-6">
+              Design & Planning
             </h2>
 
-            {/* Hex Grid */}
-            <div className="grid grid-cols-3 gap-3 mb-8">
+            {/* HEX GRID */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-6 sm:mb-8">
               {hexImages.map((img, i) => (
                 <div
                   key={i}
-                  className="aspect-square overflow-hidden rounded-2xl"
+                  className="aspect-square overflow-hidden rounded-xl sm:rounded-2xl"
                   style={{
                     clipPath:
                       "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)",
@@ -135,42 +130,28 @@ const MissionCapabilitiesSection = () => {
                     src={img.src}
                     alt={img.alt}
                     loading="lazy"
-                    width={512}
-                    height={512}
                     className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                   />
                 </div>
               ))}
             </div>
 
-            <div className="space-y-4 text-slate-200 leading-relaxed text-sm bg-white/10 rounded-2xl p-6 border border-white/20">
+            <div className="space-y-3 sm:space-y-4 text-slate-200 text-xs sm:text-sm leading-[1.6] bg-white/10 rounded-2xl p-4 sm:p-6 border border-white/20">
               <p>
-                We have a design team of our own with qualified and experienced
-                personnels for design of major projects & residences without
-                disturbing the aesthetics and without compromising
-                professionalism.
+                We have an experienced design team ensuring high-quality HVAC
+                planning without compromising aesthetics.
               </p>
               <p>
-                And we are so able to deal with a lot of leading architects and
-                consultants across Kerala for creating a co-ordinated design of
-                projects.
+                We collaborate with leading architects and consultants across Kerala.
               </p>
               <p>
-                In addition to all of this, we provide our big clients and
-                people with direct technical advice and solutions for any kind
-                of HVAC-related problem. We also teach students about HVAC
-                systems and designs, particularly VRF systems.
+                We provide direct technical solutions and training in HVAC systems.
               </p>
               <p>
-                Our own project team will provide the labor for every project,
-                and we have over 35+ permanent project staff members with
-                expertise in ducting, piping, and other related fields.
+                Our team includes 35+ skilled professionals in ducting and piping.
               </p>
               <p>
-                In order to achieve high precision and finishing,
-                machine-fabricated ducts will be utilized for both small and
-                large projects using our own heavy-duty fabrication equipment
-                and cutting tools.
+                Precision fabrication ensures high-quality finishing in all projects.
               </p>
             </div>
           </div>

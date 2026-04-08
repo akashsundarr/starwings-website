@@ -12,7 +12,6 @@ const useSmoothCount = (end: number, duration = 1500) => {
   useEffect(() => {
     let startTime: number | null = null;
 
-    // easeOutCubic (Apple-like feel)
     const easeOut = (t: number) => 1 - Math.pow(1 - t, 3);
 
     const animate = (time: number) => {
@@ -58,35 +57,30 @@ const StatCard = ({ stat, delay }: any) => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay, duration: 0.5, ease: "easeOut" }}
-      whileHover={{ scale: 1.06, y: -6 }}
-      className="group flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-5 border border-white/20 shadow-xl cursor-pointer"
+      whileHover={{ scale: 1.04, y: -4 }}
+      whileTap={{ scale: 0.96 }} // ✅ mobile interaction fix
+      className="group flex items-center gap-4 bg-white/10 backdrop-blur-md md:backdrop-blur-xl rounded-2xl p-4 sm:p-5 border border-white/20 shadow-lg cursor-pointer"
     >
       {/* ICON */}
       <motion.div
-        whileHover={{ rotate: 10, scale: 1.15 }}
-        className="flex-shrink-0 w-12 h-12 rounded-xl bg-green-400/20 flex items-center justify-center"
+        whileHover={{ rotate: 8, scale: 1.1 }}
+        className="flex-shrink-0 w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-green-400/20 flex items-center justify-center"
       >
-        <stat.icon className="w-6 h-6 text-green-400" />
+        <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-green-400" />
       </motion.div>
 
       {/* TEXT */}
       <div>
         <motion.div
-          className="font-heading text-3xl font-bold text-white leading-none"
-          animate={
-            isDone
-              ? {
-                  scale: [1, 1.4, 1],
-                }
-              : {}
-          }
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="font-heading text-2xl sm:text-3xl font-bold text-white leading-none"
+          animate={isDone ? { scale: [1, 1.25, 1] } : {}}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
           {count}
           {stat.suffix}
         </motion.div>
 
-        <div className="text-slate-200 text-sm mt-1 font-body">
+        <div className="text-slate-200 text-xs sm:text-sm mt-1 font-body">
           {stat.label}
         </div>
       </div>
@@ -97,7 +91,7 @@ const StatCard = ({ stat, delay }: any) => {
 /* ---------------- MAIN HERO ---------------- */
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden">
       {/* BACKGROUND */}
       <img
         src={heroBg}
@@ -105,52 +99,45 @@ const HeroSection = () => {
         className="absolute inset-0 w-full h-full object-cover"
         width={1920}
         height={1080}
+        loading="eager"
       />
+
       <div className="absolute inset-0 hero-overlay" />
 
       {/* CONTENT */}
-      <div className="relative container mx-auto px-4 pt-20">
-        <div className="max-w-3xl">
+      <div className="relative container mx-auto px-4 pt-16 sm:pt-20 pb-10">
+        <div className="max-w-2xl md:max-w-3xl">
           {/* BADGE */}
-          <div className="inline-flex items-center gap-2 bg-accent/20 text-white px-4 py-2 rounded-full text-sm font-heading font-medium mb-6 animate-fade-up">
+          <div className="inline-flex items-center gap-2 bg-accent/20 text-white px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-heading font-medium mb-5 sm:mb-6 animate-fade-up">
             <Snowflake className="w-4 h-4" />
             Leading HVAC Solutions Since 2006
           </div>
 
           {/* TITLE */}
-          <h1
-            className="font-heading text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 animate-fade-up"
-            style={{ animationDelay: "0.1s" }}
-          >
+          <h1 className="font-heading text-3xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-5 sm:mb-6 animate-fade-up">
             Generating <span className="text-green-brand">Superior</span>{" "}
             Comfort
           </h1>
 
           {/* DESCRIPTION */}
-          <p
-            className="text-lg md:text-xl text-slate-200 max-w-xl mb-10 font-body leading-relaxed animate-fade-up"
-            style={{ animationDelay: "0.2s" }}
-          >
+          <p className="text-base sm:text-lg md:text-xl text-slate-200 max-w-lg mb-8 sm:mb-10 font-body leading-relaxed animate-fade-up">
             Expert design, installation, and maintenance of air conditioning
             systems for commercial and residential spaces across South India.
           </p>
 
           {/* BUTTONS */}
-          <div
-            className="flex flex-col sm:flex-row gap-4 animate-fade-up"
-            style={{ animationDelay: "0.3s" }}
-          >
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-up">
             <Link
               to="/services"
-              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-lg font-heading font-semibold text-base hover:brightness-110 transition-all shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base hover:brightness-110 transition-all shadow-md"
             >
               Explore Services
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
 
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white px-8 py-4 rounded-lg font-heading font-semibold text-base hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-heading font-semibold text-sm sm:text-base hover:bg-accent hover:text-accent-foreground hover:border-accent transition-all"
             >
               Get a Quote
             </Link>
@@ -158,7 +145,7 @@ const HeroSection = () => {
         </div>
 
         {/* STATS */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 mt-14 sm:mt-16">
           {stats.map((stat, i) => (
             <StatCard key={stat.label} stat={stat} delay={i * 0.15} />
           ))}
