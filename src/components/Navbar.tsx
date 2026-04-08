@@ -18,14 +18,17 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-      <div className="container mx-auto flex items-center justify-between px-4 h-20">
+      
+      {/* Container */}
+      <div className="container mx-auto flex items-center justify-between px-4 h-16 lg:h-20">
         
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src={logoDark}
             alt="StarWings"
-            className="h-14 lg:h-16 object-contain"
+            className="h-12 lg:h-16 object-contain 
+            drop-shadow-none lg:drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
           />
         </Link>
 
@@ -47,6 +50,7 @@ const Navbar = () => {
               >
                 {link.label}
 
+                {/* Underline */}
                 <span
                   className={`absolute left-0 -bottom-1 h-[2px] w-full bg-green-500 transform transition-transform duration-300
                   ${isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
@@ -82,6 +86,7 @@ const Navbar = () => {
       {open && (
         <div className="lg:hidden bg-white border-t border-gray-200 shadow-md">
           <div className="px-6 py-6 flex flex-col gap-4">
+            
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path;
 
@@ -102,6 +107,7 @@ const Navbar = () => {
               );
             })}
 
+            {/* CTA */}
             <a
               href="tel:+919846001702"
               className="flex items-center justify-center gap-2 mt-4
@@ -111,6 +117,7 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               Call Now
             </a>
+
           </div>
         </div>
       )}
