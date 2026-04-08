@@ -67,78 +67,87 @@ const Projects = () => {
       : projects.filter((p) => p.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-navy-deep pt-20">
-     
+    <div className="min-h-screen bg-navy-deep pt-16 sm:pt-20">
 
       {/* HERO */}
-      <div className="text-center py-16">
-        <h1 className="text-4xl text-white font-bold">Our Projects</h1>
-        <p className="text-slate-300 mt-2">
+      <div className="text-center py-10 sm:py-16 px-4">
+        <h1 className="text-2xl sm:text-4xl text-white font-bold">
+          Our Projects
+        </h1>
+
+        <p className="text-slate-300 text-sm sm:text-base mt-2">
           Complete HVAC portfolio across sectors
         </p>
       </div>
 
       {/* FILTER */}
-      <div className="container mx-auto px-4 mb-10 flex flex-wrap justify-center gap-3">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition ${
-              selectedCategory === cat
-                ? "bg-accent text-white"
-                : "bg-white/10 text-slate-300 hover:bg-white/20"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
+      <div className="container mx-auto px-4 mb-6 sm:mb-10 overflow-x-auto">
+        <div className="flex gap-2 sm:gap-3 w-max mx-auto">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition ${
+                selectedCategory === cat
+                  ? "bg-accent text-white"
+                  : "bg-white/10 text-slate-300"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* GRID */}
-      <div className="container mx-auto px-4 pb-16">
-        <div className="grid md:grid-cols-3 gap-6">
+      <div className="container mx-auto px-4 pb-12 sm:pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+          
           {filteredProjects.map((p) => (
             <div
               key={p.title}
-              className="bg-white rounded-xl overflow-hidden shadow hover:shadow-xl transition duration-300 group"
+              className="bg-white rounded-lg sm:rounded-xl overflow-hidden shadow transition duration-300 group active:scale-[0.98]"
             >
               <div className="overflow-hidden">
                 <img
                   src={p.image}
-                  className="h-56 w-full object-cover group-hover:scale-105 transition duration-500"
+                  alt={p.title}
+                  className="aspect-[4/3] w-full object-cover group-hover:scale-105 transition duration-500"
                   loading="lazy"
                 />
               </div>
 
-              <div className="p-4">
-                <h3 className="font-bold text-base">{p.title}</h3>
+              <div className="p-3 sm:p-4">
+                <h3 className="font-bold text-sm sm:text-base">
+                  {p.title}
+                </h3>
 
-                <div className="flex items-center text-sm text-gray-500 mt-1">
-                  <MapPin className="w-4 h-4 mr-1" />
+                <div className="flex items-center text-xs sm:text-sm text-gray-500 mt-1">
+                  <MapPin className="w-3 h-3 sm:w-4 sm:h-4 mr-1" />
                   {p.location}
                 </div>
 
-                <div className="mt-3 flex flex-wrap gap-2 text-xs">
-                  <span className="bg-accent/10 text-accent px-2 py-1 rounded font-medium">
+                <div className="mt-2 sm:mt-3 flex flex-wrap gap-1.5 sm:gap-2 text-[10px] sm:text-xs">
+                  <span className="bg-accent/10 text-accent px-2 py-0.5 sm:py-1 rounded font-medium">
                     {p.category}
                   </span>
 
-                  <span className="bg-gray-100 px-2 py-1 rounded">
+                  <span className="bg-gray-100 px-2 py-0.5 sm:py-1 rounded">
                     {p.capacity}
                   </span>
 
-                  <span className="bg-gray-100 px-2 py-1 rounded">
+                  <span className="bg-gray-100 px-2 py-0.5 sm:py-1 rounded">
                     {p.system}
                   </span>
                 </div>
               </div>
             </div>
           ))}
+
         </div>
 
         {filteredProjects.length === 0 && (
-          <p className="text-center text-slate-400 mt-10">
+          <p className="text-center text-slate-400 mt-8 sm:mt-10 text-sm">
             No projects found.
           </p>
         )}
