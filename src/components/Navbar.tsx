@@ -22,13 +22,12 @@ const Navbar = () => {
       {/* Container */}
       <div className="container mx-auto flex items-center justify-between px-4 h-16 lg:h-20">
         
-        {/* Logo */}
+        {/* Logo (NO effects at all) */}
         <Link to="/" className="flex items-center">
           <img
             src={logoDark}
             alt="StarWings"
-            className="h-12 lg:h-16 object-contain 
-            drop-shadow-none lg:drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)]"
+            className="h-12 lg:h-16 object-contain"
           />
         </Link>
 
@@ -65,7 +64,7 @@ const Navbar = () => {
           <a
             href="tel:+919846001702"
             className="flex items-center gap-2 px-5 py-2 rounded-md text-sm font-semibold
-            bg-green-500 text-white hover:bg-green-600 transition duration-200 shadow-sm"
+            bg-green-500 text-white hover:bg-green-600 transition duration-200"
           >
             <Phone className="w-4 h-4" />
             Call Now
@@ -84,7 +83,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="lg:hidden bg-white border-t border-gray-200 shadow-md">
+        <div className="lg:hidden bg-white border-t border-gray-200">
           <div className="px-6 py-6 flex flex-col gap-4">
             
             {navLinks.map((link) => {
