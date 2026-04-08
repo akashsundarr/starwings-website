@@ -91,7 +91,7 @@ const StatCard = ({ stat, delay }: any) => {
 /* ---------------- MAIN HERO ---------------- */
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden pt-16 lg:pt-20">
       {/* BACKGROUND */}
       <img
         src={heroBg}
