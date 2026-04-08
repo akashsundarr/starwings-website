@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const About = () => {
   return (
     <div className="min-h-screen pt-20">
-      <Navbar />
+      
       
       <AboutSection />
       <FounderSection />

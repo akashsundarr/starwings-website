@@ -186,7 +186,7 @@ const productCategories = [
 const Services = () => {
   return (
     <div className="min-h-screen">
-      <Navbar />
+      
 
 
       {/* PRODUCTS SECTION */}

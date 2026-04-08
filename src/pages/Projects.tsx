@@ -68,7 +68,7 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-navy-deep pt-20">
-      <Navbar />
+     
 
       {/* HERO */}
       <div className="text-center py-16">
