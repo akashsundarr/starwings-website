@@ -1,5 +1,4 @@
 
-
 ```
 corporate-vision
 ├─ bun.lock
@@ -14,8 +13,7 @@ corporate-vision
 ├─ pnpm-lock.yaml
 ├─ postcss.config.js
 ├─ public
-│  ├─ logo.svg
-│  ├─ og_image.png
+│  ├─ og-image-v2.jpg
 │  └─ robots.txt
 ├─ README.md
 ├─ src
@@ -79,6 +77,7 @@ corporate-vision
 │  │  ├─ hex-5.jpg
 │  │  ├─ hex-6.jpg
 │  │  ├─ images-025.tif
+│  │  ├─ logo.png
 │  │  ├─ logo.svg
 │  │  ├─ maintenance-1.webp
 │  │  ├─ maintenance-2.jpg
@@ -149,6 +148,7 @@ corporate-vision
 │  │  ├─ NavLink.tsx
 │  │  ├─ ProductsHexSection.tsx
 │  │  ├─ ProjectsSection.tsx
+│  │  ├─ ScrollToTop.tsx
 │  │  ├─ ServicesSection.tsx
 │  │  └─ ui
 │  │     ├─ accordion.tsx
@@ -204,6 +204,7 @@ corporate-vision
 │  │  ├─ use-mobile.tsx
 │  │  └─ use-toast.ts
 │  ├─ index.css
+│  ├─ Layout.tsx
 │  ├─ lib
 │  │  └─ utils.ts
 │  ├─ main.tsx
@@ -222,6 +223,7 @@ corporate-vision
 ├─ tsconfig.app.json
 ├─ tsconfig.json
 ├─ tsconfig.node.json
+├─ vercel.json
 ├─ vite.config.ts
 └─ vitest.config.ts
 
